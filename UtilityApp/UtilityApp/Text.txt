@@ -1,0 +1,12 @@
+How can I save to sql data base
+create a data base with (name, amount, price, category)
+functions to add things to the data base
+
+I want the variants to read from a database and then store all the information inside of them
+Well first I want my user to be able to enter a pass word to get to the owner options
+
+Then I want them to be able to enter a price a  stock amount and a name and a category which gets added to a variant. 
+all input will be checked
+That variant will then get written into the data base when the stock is exited
+
+T

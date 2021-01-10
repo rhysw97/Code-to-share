@@ -1,0 +1,50 @@
+~Plan~
+program greets user and asks for their name;
+saves name into file
+
+program then asks user what they would like to do.
+items menu, view basket,  funds, options, exit
+
+Items:
+gives category options:
+Drinks:
+	fizzy, still, hot.
+Food:
+	crisps, choclate, sweets, misc
+
+displays the items wih prices
+
+says press number to add to basket anyother key to return to the menu  q can be exit key 
+also go back to categories option
+	if added item asked how many and then if would toke to add another item
+
+view basket,
+	allows user to view basket and update the amount of item that they have
+
+
+Options:
+	asks for password (if wrong try 3 times otherwise go back to menu)
+	gives user option.
+	Check software version.
+	software update
+	money options
+	stock
+
+
+
+
+what I need
+class for user
+class for vendor
+
+
+
+USER CLASS:
+	name
+	points
+	favourite items
+	basket
+	funds
+
+
+
