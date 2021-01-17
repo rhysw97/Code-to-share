@@ -7,7 +7,7 @@ namespace  VendingMachine {
 	public:
 		//class members
 		std::string name; //stores users name
-		double userFunds; //stores users funds
+		double userFunds = 0; //stores users funds
 		std::vector<std::string> userBasket; //stores items user wants to purchase
 
 		//method declarations

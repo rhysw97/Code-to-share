@@ -3,6 +3,7 @@
 #include <string>
 #include <regex>
 #include <iostream>
+#include <limits>
 
 //checks if string user input matches the regex pattern otherwise it gets input again
 std::string InputFunctions::getStringName(std::string inputMessage) {
@@ -14,6 +15,10 @@ std::string InputFunctions::getStringName(std::string inputMessage) {
 		//asks user to enter their name
 		std::cout << inputMessage <<"\n> ";
 		getline(std::cin, name);
+
+		// Clear the remaining stream buffer 
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
 		std::cout << std::endl;
 
 		//if user input doesn't match regex patten then prints Invalid input
@@ -22,23 +27,27 @@ std::string InputFunctions::getStringName(std::string inputMessage) {
 		}
 
 	} while (!(std::regex_match(name, re))); //loops back through function asking for name if user hasn't entered a valid input
+
 	return name;
 }
 
 //checks whether user has input a number greater than 0 and if they haven't then it asks for input again.
 int InputFunctions::getIntInput(std::string inputMessage) {
-	int userInput;
+	int userInput = 0;
 	do {
 		
 		std::cout << inputMessage << "\n> ";
 		std::cin >> userInput;
+
+		// Clear the remaining stream buffer 
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 		//if input fails or users input is less than or equal to 0 clear input and print error message
 		if (std::cin.fail() || userInput <= 0) {
 			std::cin.clear();
 			std::cin.ignore(1000, '\n');
 			std::cout << "Invalid Input" << std::endl;
-			std::cout << "Please enter a number greater than 0";
+			std::cout << "Please enter a number greater than 0\n";
 		}
 
 	} while (std::cin.fail() || userInput <= 0); //loops back through when user enters string or number 0 or lower
@@ -48,12 +57,15 @@ int InputFunctions::getIntInput(std::string inputMessage) {
 
 //checks if input is a double
 double InputFunctions::getDoubleInput(std::string inputMessage) {
-	double userInput;
+	double userInput = 0;
 
 	do {
 		//prints input message passed into function and then gets the user input
 		std::cout << inputMessage << "\n> ";
 		std::cin >> userInput;
+
+		// Clear the remaining stream buffer 
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 		//if input fails or users input is less than or equal to 0 clear input and print error message
 		if (std::cin.fail() || userInput <= 0) {

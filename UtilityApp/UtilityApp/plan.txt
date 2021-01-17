@@ -21,7 +21,6 @@ also go back to categories option
 view basket,
 	allows user to view basket and update the amount of item that they have
 
-
 Options:
 	asks for password (if wrong try 3 times otherwise go back to menu)
 	gives user option.
@@ -29,9 +28,6 @@ Options:
 	software update
 	money options
 	stock
-
-
-
 
 what I need
 class for user
@@ -45,6 +41,3 @@ USER CLASS:
 	favourite items
 	basket
 	funds
-
-
-

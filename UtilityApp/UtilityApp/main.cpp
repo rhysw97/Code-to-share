@@ -11,14 +11,23 @@ int main() {
 	//created vendor object
 	VendingMachine::Vendor vendingMachine;
 	VendingMachine::Database stockDb;
+	//#########
+	//DEBUGGING
 
 	stockDb.createStockTables();
+	vendingMachine.addDrink();
+	vendingMachine.addFood();
+
+	stockDb.addMapToTable(vendingMachine.drinks, "drinks");
 	//prints welcome message
+	stockDb.saveTableToMap("drinks");
+	//#########
+
 	vendingMachine.welcomeMessage();
 	
 	//first ask for name,
 	user.getName();
-	bool isValid;
+	bool isValid = true;
 	do{
 		isValid = true;
 		//prints out main menu and gets user input
@@ -56,7 +65,7 @@ int main() {
 			isValid = false;
 		}
 			
-	}while (!isValid);
+	}while (!isValid); //loops back through if user doesnt enter a valid input 
 
 	return 0;
 }

@@ -8,4 +8,3 @@
 void VendingMachine::User::getName() {
 	name = InputFunctions::getStringName("Please enter your name");
 }
-
