@@ -30,10 +30,33 @@ Options:
 	stock
 
 what I need
+
 class for user
+
+userMenu
+basket, name points, most bought items, funds
+
+basket, remove items, change amount, pay for items
+
+
 class for vendor
+maps to store food and drink and info
+options:
+first password to get in 3 attempts
+option to change password, 
+option to add item, option 
+to remove items. 
+count money, 
+remove money, 
+add money
 
 
+
+items menu:
+pick food or drink.
+pick category. 
+shows items and price, (maybe do description at somepoint) press number to add to basket. asks how many. You can input how many you want
+main menu option
 
 USER CLASS:
 	name

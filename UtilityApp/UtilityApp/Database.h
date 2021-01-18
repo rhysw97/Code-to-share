@@ -9,7 +9,8 @@ namespace VendingMachine {
 	
 	
 	public:
-	
+		
+
 		void createStockTables();
 		void addMapToTable(std::map < std::string, VendingMachine::Vendor::ItemInfo>& myMap, std::string tableName);
 		void saveTableToMap(std::string);

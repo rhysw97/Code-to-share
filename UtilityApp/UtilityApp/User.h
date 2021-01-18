@@ -12,5 +12,7 @@ namespace  VendingMachine {
 
 		//method declarations
 		void getName();
+		void userMenu();
+		void viewBasket();
 	};
 }

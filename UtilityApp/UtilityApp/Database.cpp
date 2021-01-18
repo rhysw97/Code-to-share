@@ -5,6 +5,10 @@
 #include <string>
 #include "Vendor.h"
 
+//Static Map Declarations
+std::map<std::string, VendingMachine::Vendor::ItemInfo> VendingMachine::Vendor::drinks;
+std::map<std::string, VendingMachine::Vendor::ItemInfo> VendingMachine::Vendor::food;
+
 void VendingMachine::Database::createStockTables() {
 
 	//list of chars for error 
@@ -91,11 +95,14 @@ int VendingMachine::Database::drinksCallback(void* data, int argc, char** argv, 
 
 
 int VendingMachine::Database::foodCallback(void* data, int argc, char** argv, char** azColName) {
+	
+	
 	VendingMachine::Vendor::ItemInfo items;
 	std::string name = argv[0];
 	items.stock = std::stoi(argv[1]);
 	items.price = std::stod(argv[2]);
 	items.category = argv[3];
+	
 
 	VendingMachine::Vendor::food.insert({ name, items });
 

@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <map>
+#include <vector>
 
 //used namespace to prevent name clashes
 namespace VendingMachine {
@@ -17,6 +18,15 @@ namespace VendingMachine {
 			std::string category;
 		};
 
+		//Password to access options menu
+		std::string optionsPassword = "Password";
+
+		std::vector<std::string> drinkCategories;
+		std::vector<std::string> foodCategories;
+
+
+	
+
 		//declared a static  bmap to store the drinks name and struct containing the drinks info
 		static std::map<std::string, ItemInfo> drinks;
 
@@ -26,10 +36,21 @@ namespace VendingMachine {
 
 		//Method Declarations
 		void welcomeMessage();
+
 		char mainMenu();
+
+		void optionsMenu();
+		void printMap(std::map < std::string, VendingMachine::Vendor::ItemInfo>& myMap);
 		void addFood();
 		void addDrink();
 
+		void itemMenu();
+		void selectCategory();
+		void updateCategories();
+		void printItemCategory();
+
+		
+
 	};
-	extern Vendor myVendor;
+	
 }

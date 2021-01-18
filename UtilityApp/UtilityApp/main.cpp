@@ -14,17 +14,20 @@ int main() {
 	//#########
 	//DEBUGGING
 
+	//creates stock tables if they haven't been created
 	stockDb.createStockTables();
-	vendingMachine.addDrink();
-	vendingMachine.addFood();
+	
 
-	stockDb.addMapToTable(vendingMachine.drinks, "drinks");
+
 	//prints welcome message
 	stockDb.saveTableToMap("drinks");
+	stockDb.saveTableToMap("food");
 	//#########
-
+	vendingMachine.printMap(vendingMachine.drinks);
+	vendingMachine.printMap(vendingMachine.food);
 	vendingMachine.welcomeMessage();
 	
+	vendingMachine.printItemCategory();
 	//first ask for name,
 	user.getName();
 	bool isValid = true;
@@ -39,7 +42,7 @@ int main() {
 			//Items Menu
 		case '1':
 			//function call for items menu
-			break;
+			
 
 			//Basket
 		case '2':
@@ -53,6 +56,8 @@ int main() {
 
 			//Options
 		case '4':
+			vendingMachine.addDrink();
+			vendingMachine.addFood();
 			//function call for options
 			break;
 
